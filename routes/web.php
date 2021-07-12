@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        'films' => ['Iron man','Harry Potter','Il Signore degli Anelli','Eragon']
+    ];
+    // var_dump($data);
+    return view('home',$data);
 });
